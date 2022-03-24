@@ -1,11 +1,14 @@
 @Library('my-library')_
 
+def buildBranch = "${buildBranch}"
+def repoUrl = https://github.com/ApekshaRao/test.git
 node(any){
 
 stage('checkout code'){
 sh 'mkdir clonecode'
 dir('clonecode'){
 gitClone(buildBranch,repoUrl)
+    }
+  }
 }
-
 
