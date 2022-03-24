@@ -5,7 +5,7 @@ def branchName= env.BRANCH_NAME
 // first stage
 node(any){
         stage('Build and deploy'){
-
+        parallel(
             "CHIKKI":{
                 try {
 
@@ -16,5 +16,6 @@ node(any){
                   throw err
                   }
               }
-            }
+            )
+           }
         }
