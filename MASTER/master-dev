@@ -1,0 +1,19 @@
+@Library('my-library')_
+
+def branchName= env.BRANCH_NAME
+
+// first stage
+
+stage('Build and deploy'){
+
+"CHIKKI":{
+try {
+
+build job: 'CHIKKI/Dev' , parameters: [string(name: "buildBranch" value: "${buildBranch}")]
+
+}
+catch(err){
+throw err
+
+}
+}
