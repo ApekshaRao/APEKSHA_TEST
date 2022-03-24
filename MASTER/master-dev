@@ -3,17 +3,18 @@
 def branchName= env.BRANCH_NAME
 
 // first stage
+node(any){
+        stage('Build and deploy'){
 
-stage('Build and deploy'){
+            "CHIKKI":{
+                try {
 
-"CHIKKI":{
-try {
+                build job: 'CHIKKI/Dev' , parameters: [string(name: "buildBranch" value: "${buildBranch}")]
 
-build job: 'CHIKKI/Dev' , parameters: [string(name: "buildBranch" value: "${buildBranch}")]
-
-}
-catch(err){
-throw err
-
-}
-}
+                  }
+              catch(err){
+                  throw err
+                  }
+              }
+            }
+        }
