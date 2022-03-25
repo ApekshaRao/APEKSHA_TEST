@@ -3,7 +3,7 @@
 echo "hi"
 
 
-node(any){
+node {
 
 echo "hi"
         stage('Build and deploy'){
