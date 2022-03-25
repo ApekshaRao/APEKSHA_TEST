@@ -9,8 +9,9 @@ echo "hi"
         stage('Build and deploy'){
         parallel(
             "CHIKKI":{
+            echo "inside"
                 try {
-
+echo "inside try"
                 build job: 'CHIKKI/Dev' , parameters: [string(name: "buildBranch" , value: "${buildBranch}")]
 
                   }
