@@ -1,5 +1,6 @@
 @Library('my-library')_
 
+echo "hi"
 
 def branchName= env.BRANCH_NAME
 
