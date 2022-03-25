@@ -3,8 +3,12 @@
 
 def branchName= env.BRANCH_NAME
 
+echo $branchName
+
 // first stage
 node(any){
+
+echo "hi"
         stage('Build and deploy'){
         parallel(
             "CHIKKI":{
