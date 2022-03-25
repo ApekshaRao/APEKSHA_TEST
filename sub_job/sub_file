@@ -3,7 +3,7 @@
 echo "hi"
 
 def buildBranch = "$buildBranch"
-def repoUrl = https://github.com/ApekshaRao/test.git
+def repoUrl = "https://github.com/ApekshaRao/test.git"
 node(any){
 
 stage('checkout code'){
