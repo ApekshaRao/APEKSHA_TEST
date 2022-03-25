@@ -2,11 +2,7 @@
 
 echo "hi"
 
-//def branchName= env.BRANCH_NAME
 
-//echo $branchName
-
-// first stage
 node(any){
 
 echo "hi"
